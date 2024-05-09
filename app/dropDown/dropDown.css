@@ -1,0 +1,49 @@
+.selectDropSec{
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0 0 0 / 20%) ;
+    position: absolute;
+    left: 38%;
+    top: 8%;
+    z-index: 100;
+    padding: 15px;
+
+}
+.selectDropSec .searchField input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #bce3c9;
+    outline: none;
+    padding: 0px 15px ;
+}
+.selectDropSec .dropResults{
+    width: 100%;
+    margin: 0px;
+    padding: 10px 0;
+    max-height: 220px; 
+    overflow-y: scroll ;
+}
+.selectDropSec .dropResults li{
+list-style: none;
+font-size: 16px;
+ width: 100%;
+ margin-top: 10px;
+}
+.selectDropSec .dropResults li.active{
+    background: #f1f1f1;
+}
+.selectDropSec .dropResults::-webkit-scrollbar{
+    width: 10px;
+}
+
+.selectDropSec .dropResults::-webkit-scrollbar-thumb
+{
+    background: #ccc;
+}
+.selectDropSec .dropResults li:hover{
+    background: #04c544;
+
+
+    
+    }
