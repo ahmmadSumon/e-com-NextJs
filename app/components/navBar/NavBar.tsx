@@ -12,7 +12,19 @@ import Image from "next/image";
 import logo from "../../../public/logo/beti.png";
 import useCartStore from "../../store/page";
 import DropDown from "../dropDown/DropDown";
-const NavBar = () => {
+import { NextPage } from "next";
+
+interface NavPageProps {
+  // Define any props your home page component expects here
+  items: Item[];
+  addItem: (item: Item) => void;
+  removeItem: (index: number) => void;
+  incrementQuantity: (index: number) => void;
+  decrementQuantity: (index: number) => void;
+  clearCart: () => void;
+}
+
+const NavBar: NextPage<NavPageProps> = () => {
   const [categories] = useState([
     { name: "Home", route: "/" },
     { name: "Men's Collection", route: "/menscollection" },
