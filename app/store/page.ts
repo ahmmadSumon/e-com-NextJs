@@ -1,4 +1,4 @@
-import { create, SetState } from 'zustand';
+import { create } from 'zustand';
 
 interface CartState {
   items: Item[];
@@ -15,7 +15,7 @@ interface Item {
   quantity: number;
 }
 
-const useCartStore = create<CartState>((set: SetState<CartState>) => ({
+const useCartStore = create<CartState>((set) => ({
   items: [],
   addItem: (item) =>
     set((state) => ({
