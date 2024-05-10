@@ -18,7 +18,7 @@ interface Item {
 const useCartStore = create<CartState>((set) => ({
   items: [],
   addItem: (item) =>
-    set((state) => ({
+    set((state: CartState) => ({
       ...state,
       items: state.items.some((i) => i.title === item.title)
         ? state.items.map((i) =>
@@ -28,13 +28,13 @@ const useCartStore = create<CartState>((set) => ({
     })),
 
   removeItem: (index) =>
-    set((state) => ({
+    set((state: CartState) => ({
       ...state,
       items: state.items.filter((_, i) => i !== index),
     })),
 
   incrementQuantity: (index) =>
-    set((state) => ({
+    set((state: CartState) => ({
       ...state,
       items: state.items.map((item, i) =>
         i === index ? { ...item, quantity: item.quantity + 1 } : item
@@ -42,7 +42,7 @@ const useCartStore = create<CartState>((set) => ({
     })),
 
   decrementQuantity: (index) =>
-    set((state) => ({
+    set((state: CartState) => ({
       ...state,
       items: state.items.map((item, i) =>
         i === index
