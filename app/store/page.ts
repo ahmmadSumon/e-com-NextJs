@@ -55,4 +55,3 @@ const useCartStore = create<CartState>((set) => ({
 }));
 
 export default useCartStore;
-
