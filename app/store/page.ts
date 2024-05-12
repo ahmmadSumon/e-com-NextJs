@@ -51,7 +51,5 @@ const useCartStore = create<CartState>((set) => ({
       ),
     })),
 
-  clearCart: () => set({ items: [] }),
+  clearCart: () => set({ items: [] as Item[] }), // Explicitly annotate the type of `items`
 }));
-
-export default useCartStore;
